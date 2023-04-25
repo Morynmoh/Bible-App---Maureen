@@ -1,6 +1,7 @@
-{   "choice":"none",
+{   
     "bible":[
     {
+        "choice":"none",
         "abbr": "Gen",
         "book": "Genesis",
         "chapters": [
