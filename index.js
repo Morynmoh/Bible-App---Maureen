@@ -28,7 +28,7 @@ fetch("http://localhost:3000/bible")
 
           for (let i = 0; i < book_name.chapters.length; i++) {
             const chapterDiv = document.createElement("div");
-            chapterDiv.className = "chapter";
+            chapterDiv.className = "chapter-button";
             chapterDiv.innerText = i+1;
             bookDiv.appendChild(chapterDiv);
 
@@ -40,7 +40,7 @@ fetch("http://localhost:3000/bible")
 
               for (let j = 0; j < book_name.chapters[i].verses; j++) {
                 const verseDiv = document.createElement("div");
-                verseDiv.className = "verse button";
+                verseDiv.className = "verse-button";
                 verseDiv.innerText = j+1;
                 chapterDiv.appendChild(verseDiv);
 
@@ -49,20 +49,25 @@ fetch("http://localhost:3000/bible")
                   book_name.choice = book_name.choice+ (j+1);
                   console.log(book_name.choice);  
                   reader_choice = book_name.choice;
-
+                        // hide all other chapter divs except for the current one
+    const allChapters = bookDiv.querySelectorAll(".chapter-button");
+    allChapters.forEach((chapter) => {
+      if (chapter !== chapterDiv) {
+        chapter.style.display = "none";
+      }});
                   // hide all other verse divs except for the current one
-                  const allVerses = chapterDiv.querySelectorAll(".verse");
+                  const allVerses = chapterDiv.querySelectorAll(".verse-button");
                   allVerses.forEach((verse) => {
                     if (verse !== verseDiv) {
                       verse.style.display = "none";
                     }
-                  });
+                });
 
                 }, {once: true});
               }
 
               // hide all other chapter divs except for the current one
-              const allChapters = bookDiv.querySelectorAll(".chapter");
+              const allChapters = bookDiv.querySelectorAll(".chapter-button");
               allChapters.forEach((chapter) => {
                 if (chapter !== chapterDiv) {
                   chapter.style.display = "none";
