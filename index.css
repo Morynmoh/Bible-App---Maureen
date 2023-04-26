@@ -31,7 +31,19 @@
     /* min-height: 100vh; */
     padding: 10rem 9% 2rem;
  }
-
+ #image-container {
+    width: 800px; 
+    height: 500px; 
+    justify-content: center;
+    align-items: center;
+}
+  
+#image-container img {
+    max-width: 100%; 
+    max-height: 100%; 
+    margin: auto; 
+    display: block; 
+}
  .header {
     position: fixed;
     top: 0;
@@ -110,6 +122,7 @@
  }
  #bible-study-h1 {
     font-size: 4.6rem;
+    text-align: center;
  }
  .social-media a {
     display: inline-flex;
@@ -378,6 +391,31 @@
     cursor: pointer;
 }
 
-
+.video-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+  }
   
+  .video-container iframe {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    height: auto;
+    margin-right: auto;
+    transition: .5s ease-out;
+    border: 3px solid var(--second-bg-color);
+  border-radius: 5px;
+  }
+
+/* .video-container iframe:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+
+} */
+.video-container iframe:hover {
+    transform: scale(2.05);
+    border-color: var(--main-color);
+  }
 
