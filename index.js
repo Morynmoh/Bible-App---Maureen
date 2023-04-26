@@ -12,6 +12,8 @@ fetch("http://localhost:3000/bible")
         bookDiv.className = "books";
         bookDiv.innerText = book_name.book;
         booksBar.appendChild(bookDiv);
+        //reload page
+        
 
         // on click on the any book , it will show the chapters of that book 
         bookDiv.addEventListener("click", () => {
