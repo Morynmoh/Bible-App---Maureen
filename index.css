@@ -265,5 +265,26 @@
     font-size: 3rem;
     color: var(--second-bg-color);
 }
-
+/* The Bible buttons listed */
+.books .verse button {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    color: #444;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 100px;
+  }
+  
+  #context-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  
 

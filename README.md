@@ -9,6 +9,8 @@ The requested verse is then styled with appropriate backgrounds, colours and can
 
 API URL: https://bible-api.com | bible_context.json
 
+json-server --watch db.json
+
 
 
 
