@@ -30,7 +30,6 @@ fetch("https://my-json-server.typicode.com/Morynmoh/Bible-App---Maureen/bible")
             chapterDiv.className = "chapter-button";
             chapterDiv.innerText = i+1;
             bookDiv.appendChild(chapterDiv);
-
        
             chapterDiv.addEventListener("click", () => {
               book_name.choice = book_name.choice + " " + (i+1)+":";
