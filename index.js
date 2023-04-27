@@ -4,7 +4,7 @@ const fetchButton = document.getElementById("fetch-button");
 const selectButton = document.getElementById("select-button");
 let reader_choice;
 
-fetch("http://localhost:3000/bible")
+fetch("https://my-json-server.typicode.com/Morynmoh/Bible-App---Maureen/bible")
   .then(response => response.json())
   .then(books => {
     books.forEach(book_name => {
@@ -111,7 +111,7 @@ document .addEventListener("DOMContentLoaded", function() {
   let reader_choice;
 
   const fetchBooks = async () => {
-    const response = await fetch("http://localhost:3000/bible");
+    const response = await fetch("https://my-json-server.typicode.com/Morynmoh/Bible-App---Maureen/bible");
     const books = await response.json();
     return books;
   }
